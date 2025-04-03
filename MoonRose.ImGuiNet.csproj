@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ImGui.NET" Version="1.91.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="src\Compiled\ImGui.frag.dxcb">
+      <LogicalName>MoonRose.ImGuiNet.ImGui.frag.dxcb</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Compiled\ImGui.frag.dxil">
+      <LogicalName>MoonRose.ImGuiNet.ImGui.frag.dxil</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Compiled\ImGui.frag.spv">
+      <LogicalName>MoonRose.ImGuiNet.ImGui.frag.spv</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Compiled\ImGui.frag.msl">
+      <LogicalName>MoonRose.ImGuiNet.ImGui.frag.msl</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Compiled\ImGui.vert.dxcb">
+      <LogicalName>MoonRose.ImGuiNet.ImGui.vert.dxcb</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Compiled\ImGui.vert.dxil">
+      <LogicalName>MoonRose.ImGuiNet.ImGui.vert.dxil</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Compiled\ImGui.vert.spv">
+      <LogicalName>MoonRose.ImGuiNet.ImGui.vert.spv</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Compiled\ImGui.vert.msl">
+      <LogicalName>MoonRose.ImGuiNet.ImGui.vert.msl</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
