@@ -38,4 +38,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\MoonWorks\MoonWorks.csproj" />
+  </ItemGroup>
+
 </Project>
