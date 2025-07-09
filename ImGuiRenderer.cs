@@ -305,8 +305,14 @@ namespace ImGuiNET
                 {
                     var drawCmd = cmdList.CmdBuffer[cmdIndex];
 
+                    Texture tex = TextureStorage.GetTexture(drawCmd.TextureId);
+                    if (tex == null || tex.Handle == 0)
+                    {
+                        indexOffset += drawCmd.ElemCount;
+                        continue;
+                    }
                     renderPass.BindFragmentSamplers(
-                        new TextureSamplerBinding(TextureStorage.GetTexture(drawCmd.TextureId), sampler)
+                        new TextureSamplerBinding(tex, sampler)
                     );
 
                     var topLeft = Vector2.Transform(new Vector2(drawCmd.ClipRect.X, drawCmd.ClipRect.Y), viewProjectionMatrix);
