@@ -510,6 +510,10 @@ namespace ImGuiNET
                 {
                     PointerToTexture.Add(texture.Handle, new WeakReference<Texture>(texture));
                 }
+                else
+                {
+                    PointerToTexture[texture.Handle] = new WeakReference<Texture>(texture);
+                }
                 return texture.Handle;
             }
 
